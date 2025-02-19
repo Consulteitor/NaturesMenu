@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-level Collapsible E-commerce Menu</title>
+    <style>
+        .lateral-menu {
+            width: 300px; /* Increased width for nested levels */
+            background-color: #f1f1f1;
+            font-family: Arial, sans-serif;
+        }
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+        .active, .accordion:hover {
+            background-color: #ccc; 
+        }
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+        .panel ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .panel ul ul {
+            padding-left: 20px;
+        }
+        .sub-accordion {
+            background-color: #f8f8f8;
+            color: #444;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 14px;
+            transition: 0.3s;
+            margin-top: 5px;
+        }
+        .sub-accordion.active, .sub-accordion:hover {
+            background-color: #e8e8e8; 
+        }
+        .sub-panel {
+            padding: 0 10px;
+            display: none;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<div class="lateral-menu">
+    <!-- Filtres tranversals -->
+    <div class="menu-item">
+        <button class="accordion">Filtres tranversals</button>
+        <div class="panel">
+            <ul>
+                <li>Cat</li>
+                <li>Dog</li>
+                <li>Puppy</li>
+                <li>Adult</li>
+                <li>Senior</li>
+                <li>No cereals</li>
+                <li>Cereals</li>
+                <li>Complete diet</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Raw Complete -->
+    <div class="menu-item">
+        <button class="accordion">Raw Complete</button>
+        <div class="panel">
+            <ul>
+                <li>
+                    <button class="sub-accordion">Product Type</button>
+                    <div class="sub-panel">
+                        <ul>
+                            <li>Nuggets</li>
+                            <li>Blocks</li>
+                            <li>Free Flow</li>
+                            <li>Raw Chunks</li>
+                            <li>DIY</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <button class="sub-accordion">Range</button>
+                    <div class="sub-panel">
+                        <ul>
+                            <li>Complete & Balanced 60/40</li>
+                            <li>Complete & Balanced 80/20</li>
+                            <li>Complete & Balanced Puppy 80/20</li>
+                            <li>Home Prepare</li>
+                            <li>Ready to Mix</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <button class="sub-accordion">Ingredients</button>
+                    <div class="sub-panel">
+                        <ul>
+                            <li>Chicken</li>
+                            <li>Beef</li>
+                            <li>Lamb</li>
+                            <li>Turkey</li>
+                            <li>Duck</li>
+                            <li>Salmon</li>
+                            <li>Venison</li>
+                            <li>Pheasant</li>
+                            <li>Rabbit</li>
+                            <li>Boar</li>
+                            <li>Goose</li>
+                            <li>Multiflavour</li>
+                            <li>Offals</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <button class="sub-accordion">Weight</button>
+                    <div class="sub-panel">
+                        <ul>
+                            <li>400g</li>
+                            <li>2kg</li>
+                            <li>2.4kg</li>
+                            <li>4.8kg</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Snacks & Treats -->
+    <div class="menu-item">
+        <button class="accordion">Snacks & Treats</button>
+        <div class="panel">
+            <ul>
+                <li>
+                    <button class="sub-accordion">Product Type</button>
+                    <div class="sub-panel">
+                        <ul>
+                            <li>Raw Treats</li>
+                            <li>Snacks/Treats</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <button class="sub-accordion">Range</button>
+                    <div class="sub-panel">
+                        <ul>
+                            <li>Country Hunter</li>
+                            <li>NM Original</li>
+                            <li>Training Treats</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <button class="sub-accordion">Ingredients</button>
+                    <div class="sub-panel">
+                        <ul>
+                            <li>Chicken</li>
+                            <li>Beef</li>
+                            <li>Lamb</li>
+                            <li>Turkey</li>
+                            <li>Salmon</li>
+                            <li>Venison</li>
+                            <li>Duck</li>
+                            <li>Rabbit</li>
+                            <li>Pheasant</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <button class="sub-accordion">Weight</button>
+                    <div class="sub-panel">
+                        <ul>
+                            <li>Small bags (100g)</li>
+                            <li>Medium bags (500g)</li>
+                            <li>Large bags (1kg+)</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Cans & Pouches -->
+    <div class="menu-item">
+        <button class="accordion">Cans & Pouches</button>
+        <div class="panel">
+            <ul>
+                <li>
+                    <button class="sub-accordion">Product Type</button>
+                    <div class="sub-panel">
+                        <ul>
+                            <li>Cans</li>
+                            <li>Pouches</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <button class="sub-accordion">Range</button>
+                    <div class="sub-panel">
+                        <ul>
+                            <li>Country Hunter</li>
+                            <li>NM Original</li>
+                            <li>Complete Wet Food</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <button class="sub-accordion">Ingredients</button>
+                    <div class="sub-panel">
+                        <ul>
+                            <li>Chicken</li>
+                            <li>Beef</li>
+                            <li>Lamb</li>
+                            <li>Turkey</li>
+                            <li>Duck</li>
+                            <li>Salmon</li>
+                            <li>Venison</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <button class="sub-accordion">Weight</button>
+                    <div class="sub-panel">
+                        <ul>
+                            <li>Small (150g-200g)</li>
+                            <li>Medium (300g-400g)</li>
+                            <li>Large (600g+)</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Tailored Pet Bundles -->
+    <div class="menu-item">
+        <button class="accordion">Tailored Pet Bundles</button>
+        <div class="panel">
+            <ul>
+                <li>Puppy Starter Pack</li>
+                <li>Senior Wellness Bundle</li>
+                <li>High Energy Power Pack</li>
+                <li>Sensitive Stomach Bundle</li>
+                <li>Best Sellers Hamper</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleAccordion(itemClass) {
+        document.querySelectorAll(itemClass).forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.toggle('active');
+                let panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        });
+    }
+
+    // Initialize all accordions
+    toggleAccordion('.accordion');
+    toggleAccordion('.sub-accordion');
+</script>
+
+</body>
+</html>
+``` ▋
